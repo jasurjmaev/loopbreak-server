@@ -1,0 +1,1340 @@
+﻿<!DOCTYPE html>
+
+<html lang="uz">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+
+<meta name="theme-color" content="#080c16">
+
+<title>LOOPBREAK — Haqiqatni top</title>
+
+<script src="https://telegram.org/js/telegram-web-app.js"></script>
+
+<style>
+
+:root{--bg:#080c16;--panel:#111a2b;--panel2:#172238;--cyan:#5ef4ed;--purple:#a88bff;--text:#f2f6ff;--muted:#94a4bd;--line:#29374d;--green:#74f0b0;--red:#ff7289;--gold:#ffd779}*{box-sizing:border-box}html{background:var(--bg);scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at 80% 0%,#18354b,transparent 42%),radial-gradient(ellipse at 0% 45%,#241a45,transparent 40%),var(--bg);color:var(--text);font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;min-height:100vh;padding:0 0 calc(95px + env(safe-area-inset-bottom))}button,input{font:inherit}button{cursor:pointer;-webkit-tap-highlight-color:transparent}button:focus-visible{outline:2px solid var(--cyan);outline-offset:3px}.app{max-width:600px;margin:auto;padding:16px 16px 28px}header{display:flex;align-items:center;justify-content:space-between;gap:10px;margin:8px 0 22px}.brand{display:flex;align-items:center;gap:10px}.logo{width:44px;height:44px;border-radius:15px;display:grid;place-items:center;background:linear-gradient(145deg,var(--cyan),#8c8bff);color:#07121b;font-size:23px;font-weight:1000;box-shadow:0 0 28px #5ef4ed35}.brand-name{font-size:20px;font-weight:950;letter-spacing:2px}.brand-sub{font-size:10px;color:var(--muted);letter-spacing:2px;margin-top:3px}.pill{border:1px solid var(--line);background:#101a2a;border-radius:30px;padding:9px 12px;font-size:12px;color:var(--cyan)}.view{display:none;animation:appear .24s ease}.view.active{display:block}@keyframes appear{from{opacity:0;transform:translateY(7px)}to{opacity:1;transform:translateY(0)}}.hero{position:relative;overflow:hidden;padding:26px 22px;border:1px solid #355166;border-radius:26px;background:linear-gradient(140deg,#172c42,#171b36 65%,#222045);box-shadow:0 20px 50px #0003;margin-bottom:18px}.hero:after{content:"в—‰";position:absolute;right:-16px;bottom:-55px;font-size:180px;color:#5ef4ed09;font-weight:900}.eyebrow{color:var(--cyan);font-size:11px;font-weight:850;letter-spacing:2px}h1{font-size:clamp(30px,8vw,44px);line-height:1.08;letter-spacing:-1.6px;margin:14px 0}h2{font-size:24px;letter-spacing:-.6px;margin:8px 0 14px}h3{font-size:16px;margin:0 0 8px}p{line-height:1.6}.muted{color:var(--muted);font-size:13px;line-height:1.6}.creator{color:#9aaac1;font-size:10px;letter-spacing:2px;margin-top:20px}.btn{width:100%;border:1px solid var(--line);border-radius:15px;padding:14px 16px;color:var(--text);background:var(--panel2);font-weight:750;transition:transform .15s,border-color .15s;text-align:center;margin-top:9px}.btn:active{transform:scale(.98)}.btn.primary{color:#06141a;border:0;background:linear-gradient(100deg,var(--cyan),#9af9d8);box-shadow:0 7px 25px #5ef4ed20}.btn.secondary{background:linear-gradient(110deg,#272044,#172a40);border-color:#45406e}.btn.ghost{background:#0e1625}.btn.danger{border-color:#7b354c;background:#301a2a}.grid2{display:grid;grid-template-columns:1fr 1fr;gap:10px}.card{border:1px solid var(--line);border-radius:19px;padding:16px;background:linear-gradient(145deg,#141f32,#101726);margin:10px 0}.tile{min-height:105px;text-align:left}.tile-icon{font-size:25px;margin-bottom:12px}.tile-title{font-size:14px;font-weight:850}.tile-sub{font-size:11px;color:var(--muted);margin-top:5px;line-height:1.4}.stat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:16px 0}.stat{border:1px solid var(--line);border-radius:15px;background:#111a29;padding:12px 8px;text-align:center}.stat-num{font-size:21px;font-weight:900;color:var(--cyan)}.stat-label{font-size:10px;color:var(--muted);margin-top:5px}.progress{height:7px;background:#29364b;border-radius:9px;overflow:hidden;margin:10px 0}.progress>div{height:100%;background:linear-gradient(90deg,var(--cyan),var(--purple));width:0;transition:width .3s}.section-head{display:flex;align-items:center;justify-content:space-between;gap:10px;margin:24px 0 10px}.section-head h2{margin:0}.small-btn{background:none;color:var(--cyan);border:0;font-size:12px;font-weight:800;padding:8px}.story-art{min-height:140px;border:1px solid #344a65;border-radius:21px;display:grid;place-items:center;background:radial-gradient(circle at 50% 50%,#334c70,#161b35 60%,#101726);font-size:66px;margin-bottom:15px;position:relative;overflow:hidden}.story-art:after{content:"";position:absolute;inset:0;background:linear-gradient(transparent 48%,#5ef4ed09 50%,transparent 52%);background-size:100% 8px;pointer-events:none}.scene-label{font-size:10px;letter-spacing:2px;color:var(--cyan);font-weight:850}.scene-title{font-size:25px;font-weight:900;margin:8px 0}.story-text{font-size:14px;line-height:1.75;color:#d7e0ef;white-space:pre-line}.choice{display:flex;align-items:flex-start;gap:11px;text-align:left}.choice-icon{width:36px;height:36px;flex-shrink:0;display:grid;place-items:center;background:#26334a;border-radius:12px;font-size:18px}.choice-text{flex:1}.choice-title{font-weight:850;font-size:13px}.choice-desc{font-size:11px;color:var(--muted);line-height:1.5;margin-top:4px}.choice-mark{color:var(--cyan);font-size:18px}.badge{display:inline-block;padding:6px 9px;border-radius:9px;background:#1a2d3b;color:var(--cyan);font-size:10px;font-weight:800;margin:3px}.notice{border:1px solid #66512e;background:#2a251b;border-radius:14px;padding:12px;color:#ffe0a0;font-size:12px;line-height:1.6}.field{width:100%;padding:14px;border-radius:13px;border:1px solid var(--line);background:#0c1421;color:white;margin:7px 0;outline:none}.field:focus{border-color:var(--cyan)}.nav{position:fixed;z-index:20;bottom:0;left:0;right:0;padding:9px 7px calc(9px + env(safe-area-inset-bottom));background:#0b101dec;backdrop-filter:blur(20px);border-top:1px solid #263147;display:flex;justify-content:center;gap:3px}.nav button{flex:1;max-width:110px;border:0;background:none;color:#8e9db4;border-radius:13px;padding:9px 2px;font-size:10px;font-weight:700}.nav button span{display:block;font-size:20px;margin-bottom:4px}.nav button.active{background:#19303b;color:var(--cyan)}.row{display:flex;align-items:center;gap:12px}.row .grow{flex:1;min-width:0}.row-between{display:flex;align-items:center;justify-content:space-between;gap:10px}hr{border:0;border-top:1px solid var(--line);margin:14px 0}.empty{text-align:center;padding:24px 10px;color:var(--muted);font-size:13px}.toast{position:fixed;z-index:50;left:50%;bottom:100px;transform:translate(-50%,12px);opacity:0;pointer-events:none;background:#e9fffb;color:#0b1a20;border-radius:13px;padding:12px 17px;font-size:12px;font-weight:850;box-shadow:0 8px 35px #0006;transition:all .2s;max-width:90%;text-align:center}.toast.show{opacity:1;transform:translate(-50%,0)}.footer{text-align:center;color:#64738a;font-size:10px;letter-spacing:2px;margin:24px 0 0}.avatar-box{width:58px;height:58px;flex-shrink:0;display:grid;place-items:center;border-radius:18px;background:linear-gradient(145deg,#183c4b,#282044);border:1px solid var(--cyan);font-size:30px}.private-id{color:var(--cyan);font-size:17px;font-weight:900;letter-spacing:1.5px;overflow-wrap:anywhere}.avatar-picker{display:grid;grid-template-columns:repeat(4,1fr);gap:9px;margin:12px 0}.avatar-option{background:#111a2b;color:white;border:1px solid var(--line);border-radius:14px;padding:12px 5px;font-size:27px}.avatar-option.selected{border:2px solid var(--cyan);background:#193541}.achievement-card{border:1px solid var(--line);background:#111a2b;border-radius:15px;padding:13px;margin:8px 0}@media(min-width:500px){.app{padding-top:24px}.hero{padding:34px}.nav button{font-size:11px}}@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+
+
+
+/* LOOPBREAK PREMIUM POLISH — visual-only update; gameplay and saves preserved */
+
+:root{--bg:#070912;--panel:#101626;--panel2:#171f34;--cyan:#73fff2;--purple:#b69cff;--text:#f4f7ff;--muted:#a0aec5;--line:#2a3650;--gold:#ffe29a}
+
+body{background:radial-gradient(ellipse at 12% -5%,#253c65 0,transparent 36%),radial-gradient(ellipse at 100% 20%,#382354 0,transparent 32%),radial-gradient(ellipse at 55% 100%,#0c3c42 0,transparent 35%),var(--bg);background-attachment:fixed}
+
+.app{padding-left:18px;padding-right:18px}
+
+header{margin-top:12px;margin-bottom:25px}
+
+.logo{border-radius:16px;background:linear-gradient(135deg,#9bfff4 0%,#7b8cff 52%,#c3a0ff 100%);box-shadow:0 0 0 5px #8df9f20b,0 8px 32px #6cf5ed30;animation:logoGlow 4s ease-in-out infinite}
+
+@keyframes logoGlow{0%,100%{box-shadow:0 0 0 5px #8df9f20b,0 8px 32px #6cf5ed22}50%{box-shadow:0 0 0 7px #8df9f20c,0 8px 38px #a88bff40}}
+
+.brand-name{letter-spacing:2.8px;text-shadow:0 0 22px #8df9f21c}
+
+.pill{background:#111a2bd9;border-color:#44516b;box-shadow:inset 0 1px #ffffff08;backdrop-filter:blur(12px)}
+
+.hero{border:1px solid #6479a05c;border-radius:28px;background:linear-gradient(135deg,#1a2d49ed 0%,#191a35ed 55%,#242044ed 100%);box-shadow:0 24px 60px #0005,inset 0 1px #ffffff10;isolation:isolate}
+
+.hero:before{content:"";position:absolute;inset:0;z-index:-1;opacity:.23;background:linear-gradient(120deg,transparent 15%,#9cfff41a 45%,transparent 68%);background-size:220% 100%;animation:shine 8s linear infinite}
+
+@keyframes shine{to{background-position:-220% 0}}
+
+.hero:after{color:#7ffcf20b;transform:rotate(-12deg)}
+
+h1{letter-spacing:-2px;text-shadow:0 4px 28px #0003}
+
+.eyebrow,.scene-label{letter-spacing:2.4px}
+
+.btn{position:relative;overflow:hidden;border-radius:16px;border-color:#35425d;background:linear-gradient(145deg,#18233a,#121a2b);box-shadow:inset 0 1px #ffffff08;transition:transform .18s ease,border-color .18s ease,filter .18s ease,box-shadow .18s ease}
+
+.btn:hover{border-color:#6e829f;filter:brightness(1.08);box-shadow:0 8px 25px #0002}
+
+.btn:active{transform:scale(.975)}
+
+.btn.primary{background:linear-gradient(105deg,#7affef,#b0ffe5 52%,#b8b0ff);box-shadow:0 8px 28px #65f7e927,inset 0 1px #ffffffa6;color:#08131b}
+
+.btn.secondary{background:linear-gradient(115deg,#30264e,#192a42);border-color:#514775}
+
+.card,.stat,.achievement-card{border-color:#35415b;background:linear-gradient(145deg,#151f32eF,#0e1525f2);box-shadow:inset 0 1px #ffffff08,0 10px 28px #00000010;backdrop-filter:blur(10px)}
+
+.tile{transition:transform .18s ease,border-color .18s ease,background .18s ease}
+
+.tile:hover{transform:translateY(-2px);border-color:#6e829f}
+
+.stat{border-radius:17px}
+
+.stat-num{ text-shadow:0 0 20px #5ef4ed22 }
+
+.progress{height:8px;background:#273149;border:1px solid #ffffff06}
+
+.progress>div{background:linear-gradient(90deg,#70fff0,#9e9bff,#e0b8ff);box-shadow:0 0 15px #7ffcf455;border-radius:9px}
+
+.story-art{border-color:#516588;background:radial-gradient(circle at 50% 40%,#415a80,#1d2342 56%,#101625);box-shadow:inset 0 1px #ffffff18,0 15px 35px #0003}
+
+.choice{border-radius:17px;padding:15px;background:linear-gradient(120deg,#172238,#111a2b);align-items:center}
+
+.choice-icon{background:linear-gradient(145deg,#2c3d5b,#262342);border:1px solid #ffffff0b}
+
+.choice-mark{font-size:24px;line-height:1}
+
+.badge{border:1px solid #4b7380;background:linear-gradient(120deg,#18333d,#222341);color:#9cfff4;border-radius:10px}
+
+.nav{background:#090e1beF;border-top-color:#36405a;box-shadow:0 -10px 30px #0002}
+
+.nav button{transition:background .18s ease,color .18s ease}
+
+.nav button.active{background:linear-gradient(135deg,#193d47,#28264b);color:#9cfff4;box-shadow:inset 0 1px #ffffff10}
+
+.field{background:#0b1220;border-color:#35415b}
+
+.field:focus{box-shadow:0 0 0 3px #73fff21b}
+
+.avatar-box{box-shadow:0 0 25px #5ef4ed14}
+
+.toast{border:1px solid #c1fff4;background:linear-gradient(110deg,#eafffc,#e6e7ff);box-shadow:0 12px 38px #0005}
+
+::selection{background:#7affef55;color:#fff}
+
+@media(max-width:380px){.app{padding-left:12px;padding-right:12px}.hero{padding:22px 18px}.brand-name{font-size:18px}.stat-num{font-size:19px}}
+
+@media(prefers-reduced-motion:reduce){.logo,.hero:before{animation:none!important}}
+
+
+
+</style>
+.creator-card {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(255, 55, 75, 0.42);
+  border-radius: 20px;
+  background:
+    radial-gradient(ellipse at top right, rgba(180, 20, 45, 0.2), transparent 55%),
+    linear-gradient(145deg, #151116, #09090d);
+  box-shadow: 0 8px 30px rgba(255, 30, 55, 0.09);
+}
+
+.creator-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 14px;
+}
+
+.creator-avatar {
+  width: 54px;
+  height: 54px;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  border-radius: 16px;
+  font-size: 27px;
+  background: linear-gradient(145deg, #40121e, #190b10);
+  border: 1px solid rgba(255, 65, 85, 0.5);
+  box-shadow: 0 0 18px rgba(255, 40, 65, 0.12);
+}
+
+.creator-title {
+  font-size: 20px;
+  font-weight: 900;
+  letter-spacing: 1.5px;
+}
+
+.creator-subtitle,
+.creator-label {
+  color: #ff5368;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.6px;
+  margin-top: 4px;
+}
+
+.creator-status {
+  margin-left: auto;
+  color: #ff6477;
+  font-size: 9px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.creator-divider {
+  height: 1px;
+  margin: 18px 0;
+  background: linear-gradient(90deg, #ff344f, rgba(255, 52, 79, 0.04));
+}
+
+.creator-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.creator-icon {
+  font-size: 25px;
+}
+
+.creator-label {
+  margin: 0 0 5px;
+}
+
+.creator-value {
+  font-size: 17px;
+  font-weight: 850;
+}
+
+.creator-telegram {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px;
+  border: 1px solid rgba(255, 60, 80, 0.22);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.035);
+  color: inherit;
+  text-decoration: none;
+  font-weight: 750;
+}
+
+.creator-arrow {
+  margin-left: auto;
+  color: #ff5368;
+  font-size: 20px;
+}
+
+.creator-slogan {
+  margin-top: 15px;
+  padding: 13px 8px;
+  border-radius: 10px;
+  background: rgba(255, 40, 65, 0.08);
+  color: #ff5368;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 1.2px;
+}
+
+
+</head>
+
+<body>
+
+<div class="app">
+
+<header><div class="brand"><div class="logo">L</div><div><div class="brand-name">LOOPBREAK</div><div class="brand-sub">BREAK THE CYCLE</div></div></div><div class="pill" id="headerXp">в­ђ 0 XP</div></header>
+
+<section id="home" class="view active"><div class="hero"><div class="eyebrow">в—Џ PSIXOLOGIK SARGUZASHT</div><h1>Haqiqatni top.<br>Siklni buz.</h1><p class="muted">Har bir tanlovning oqibati bor. Dalillarni yigвЂ, sirlarga javob top va oвЂz yakuningni yarat.</p><button class="btn primary" onclick="startGame()">в–¶ Sarguzashtni boshlash</button><div class="creator">YARATUVCHI: JASURIY</div></div><div class="stat-grid"><div class="stat"><div class="stat-num" id="homeLevel">1</div><div class="stat-label">DARAJA</div></div><div class="stat"><div class="stat-num" id="homeGames">0</div><div class="stat-label">OвЂYINLAR</div></div><div class="stat"><div class="stat-num" id="homeEvidence">0</div><div class="stat-label">DALILLAR</div></div></div><div class="section-head"><h2>Davom et</h2><button class="small-btn" onclick="go('profile')">PROFIL →</button></div><div class="card"><div class="row-between"><strong id="homeRank">Yangi oвЂyinchi</strong><span class="badge" id="homeProgress">0% TARAQQIYOT</span></div><div class="progress"><div id="homeBar"></div></div><div class="muted" id="homeProgressText">Birinchi missiyangni boshlash vaqti keldi.</div></div><div class="section-head"><h2>OвЂyin rejimlari</h2></div><div class="grid2"><button class="card tile" onclick="startGame()"><div class="tile-icon">рџ•µпёЏ</div><div class="tile-title">Yakka missiya</div><div class="tile-sub">Syujet, dalillar va tanlovlar</div></button><button class="card tile" onclick="go('group')"><div class="tile-icon">рџ‘Ґ</div><div class="tile-title">Guruh rejimi</div><div class="tile-sub">Xona kodi va doвЂstlar</div></button><button class="card tile" onclick="go('missions')"><div class="tile-icon">рџЋЇ</div><div class="tile-title">Topshiriqlar</div><div class="tile-sub">Maqsadlar va yutuqlar</div></button><button class="card tile" onclick="go('ranking')"><div class="tile-icon">рџЏ†</div><div class="tile-title">Reyting</div><div class="tile-sub">OвЂz natijalaringni koвЂr</div></button><button class="card tile" onclick="go('secrets')"><div class="tile-icon">рџ§©</div><div class="tile-title">Sirlar va dalillar</div><div class="tile-sub">Shifr, kamera va oldingi qarorlar</div></button></div></section>
+
+<section id="solo" class="view"><div class="row-between"><button class="small-btn" onclick="go('home')">← MENYU</button><span class="badge" id="stageBadge">1 / 5 BOSQICH</span></div><div class="progress"><div id="storyBar"></div></div><div class="stat-grid"><div class="stat"><div class="stat-num" id="energyStat">100</div><div class="stat-label">вљЎ ENERGIYA</div></div><div class="stat"><div class="stat-num" id="trustStat">50</div><div class="stat-label">рџ¤ќ ISHONCH</div></div><div class="stat"><div class="stat-num" id="dangerStat">10</div><div class="stat-label">вљ пёЏ XAVF</div></div></div><div class="story-art" id="sceneArt">рџЊ’</div><div class="scene-label" id="sceneLabel">MISSIYA 01</div><div class="scene-title" id="sceneTitle">Boshlanish</div><div class="story-text" id="sceneText"></div><div class="card" id="clueCard" style="display:none"><div class="eyebrow">рџ”Ћ TOPILGAN DALILLAR</div><div id="clueList" style="margin-top:8px"></div></div><div class="section-head"><h2>Qaroringni tanla</h2></div><div id="choices"></div><button class="btn ghost" onclick="resetGameConfirm()">в†» Missiyani boshidan boshlash</button></section>
+
+<section id="group" class="view"><div class="eyebrow">рџ‘Ґ BIRGALIKDA</div><h2>Guruh missiyasi</h2><p class="muted">DoвЂstlaring bilan serverda xona yarat, xona kodini ulash va ishtirokchilarni kuzat.</p><div class="card"><div class="eyebrow">YANGI XONA</div><h3>OвЂz guruhingni yarat</h3><button class="btn primary" onclick="createRoom()">пј‹ Xona yaratish</button><div id="roomCreated" style="display:none;margin-top:15px"><div class="stat"><div class="eyebrow">SENING XONA KODING</div><div class="stat-num" id="roomCode" style="font-size:32px;letter-spacing:5px">----</div></div><button class="btn" onclick="copyRoom()">рџ“‹ Kodni nusxalash</button><button class="btn ghost" onclick="shareRoom()">
+  <div id="lbRolePanel" class="card" style="margin-top:14px">
+  <div class="eyebrow">MISSIYA ROLI</div>
+  <p class="muted">Bu missiyada qaysi uslubda o‘ynaysan?</p>
+
+  <div id="lbRoleChoices" style="display:grid;gap:10px"></div>
+
+  <div id="lbRoleStatus" class="badge" style="margin-top:10px">
+    Rol tanlanmagan
+  </div>
+</div>
+  в†— DoвЂstga yuborish
+</button>
+
+<div id="roomStatus" class="muted" style="margin-top:12px"></div>
+
+<div id="roomPlayers" style="margin-top:10px"></div>
+
+<button class="btn danger" onclick="leaveRoom()">
+  Xonadan chiqish
+</button></div></div><div class="card"><div class="eyebrow">XONAGA QOвЂSHILISH</div><h3>Koding bormi?</h3><input class="field" id="joinCode" maxlength="8" placeholder="XONA KODINI KIRIT" autocomplete="off"><button class="btn secondary" onclick="joinRoom()">Xonaga qoвЂshilish</button><div id="joinResult" class="muted"></div></div><button class="btn ghost" onclick="go('home')">← Asosiy menyu</button></section>
+
+<section id="profile" class="view"><div class="eyebrow">SHAXSIY KABINET</div><h2>Maxfiy profil</h2><div class="hero"><div class="row"><div class="avatar-box" id="profileAvatar">рџ•¶пёЏ</div><div class="grow"><div style="font-size:19px;font-weight:900" id="profileName">OвЂyinchi</div><div class="muted" id="profileLevel">1-daraja</div><div class="private-id" id="privateId">LB-000000</div></div><span class="badge" id="profileBadge">NOVICE</span></div><hr><div class="row-between"><span class="muted">Keyingi daraja</span><strong id="xpProgressText">0 / 100 XP</strong></div><div class="progress"><div id="xpBar"></div></div><button class="btn ghost" onclick="copyPrivateId()">рџ“‹ Maxfiy ID’ni nusxalash</button></div><div class="card"><h3>рџЄЄ Profilni sozlash</h3><label class="muted" for="profileNameInput">KoвЂrinadigan ism</label><input class="field" id="profileNameInput" maxlength="24" placeholder="Ismingni yoz"><h3 style="margin-top:14px">Avatar tanla</h3><div class="avatar-picker" id="avatarPicker"></div><button class="btn primary" onclick="saveProfile()">Profilni saqlash</button></div><div class="stat-grid"><div class="stat"><div class="stat-num" id="profileXp">0</div><div class="stat-label">UMUMIY XP</div></div><div class="stat"><div class="stat-num" id="profileGames">0</div><div class="stat-label">OвЂYINLAR</div></div><div class="stat"><div class="stat-num" id="profileClues">0</div><div class="stat-label">DALILLAR</div></div></div><div class="section-head"><h2>рџ”Ґ Streak va рџ’Ћ Premium</h2></div><div class="card"><div class="eyebrow">KUNLIK SERIYA</div><h3>Har kuni qaytib kel</h3><p class="muted">Streak bot bazasida hisoblanadi. Bugungi kirishni tasdiqlash uchun tugmani bosing.</p><button class="btn primary" onclick="sendStreakCheckin()">рџ”Ґ Bugungi Streakni qayd etish</button></div><div class="card"><div class="eyebrow">MAXSUS IMKONIYATLAR</div><h3>рџ’Ћ LOOPBREAK Premium</h3><p class="muted">Premium muddatini Telegram Stars orqali sotib oling. ToвЂlov botda tasdiqlanadi.</p><div class="grid2"><div class="stat"><div class="stat-num">30</div><div class="stat-label">KUN В· 100 STARS</div></div><div class="stat"><div class="stat-num">90</div><div class="stat-label">KUN В· 250 STARS</div></div></div><button class="btn primary" onclick="requestPremium()">рџ’Ћ Premium olish</button><p class="muted">365 kunlik reja: 500 Stars. Asosiy oвЂyin bepul qoladi.</p></div><div class="section-head"><h2>Yutuqlar</h2></div><div id="profileAchievements"></div><div class="section-head"><h2>Oxirgi yakunlar</h2></div><div class="card" id="historyList"><div class="empty">Hozircha natija yoвЂq.</div></div><button class="btn ghost" onclick="exportProgress()">в¬‡ Natijalarimni saqlash</button>
+<div class="card creator-card">
+  <div class="eyebrow">THE MIND BEHIND THE GAME</div>
+
+  <div class="creator-header">
+    <div class="creator-avatar">рџЋ®</div>
+    <div class="grow">
+      <div class="creator-title">LOOPBREAK</div>
+      <div class="creator-subtitle">CREATOR PROFILE</div>
+    </div>
+    <span class="creator-status">в—Џ ACTIVE</span>
+  </div>
+
+  <div class="creator-divider"></div>
+
+  <div class="creator-info">
+    <span class="creator-icon">рџ‘‘</span>
+    <div>
+      <div class="creator-label">GAME CREATOR</div>
+      <div class="creator-value">Jasuriy</div>
+    </div>
+  </div>
+
+  <a class="creator-telegram"
+     href="https://t.me/wxs_z"
+     target="_blank"
+     rel="noopener noreferrer">
+    <span>вњ€пёЏ</span>
+    <span>Telegram: @wxs_z</span>
+    <span class="creator-arrow">в†—</span>
+  </a>
+
+  <div class="creator-slogan">
+    <span>рџ”ґ</span> THINK. SOLVE. SURVIVE.
+  </div>
+</div>
+</section>
+
+<section id="ranking" class="view"><div class="eyebrow">ENG YAXSHILAR</div><h2>рџЏ† Reyting</h2><div class="card"><div class="muted">Bu qurilmadagi mahalliy natijalar</div><div id="localRanking" style="margin-top:12px"></div></div><div class="notice">Umumiy internet reytingi uchun server kerak.</div><button class="btn primary" onclick="startGame()">Yangi natija yarat</button></section>
+
+<section id="missions" class="view"><div class="eyebrow">KUNLIK MAQSADLAR</div><h2>рџЋЇ Topshiriqlar</h2><div id="missionList"></div><div class="section-head"><h2>Yutuqlar</h2></div><div id="achievementList"></div></section>
+
+<section id="secrets" class="view"><div class="eyebrow">OBSIDIAN ARXIVI</div><h2>рџ§© Sirlar va dalillar</h2><p class="muted">Topilgan izlar shu qurilmada saqlanadi. Jumboqlarni yechib qoвЂshimcha XP ol.</p><div class="card"><div class="eyebrow">рџ”Ћ DALILLAR DOSKASI</div><div id="evidenceBoard" class="muted" style="margin-top:10px">Hali dalil topilmadi. Missiyani oвЂynab, izlarni yigвЂ.</div></div><div class="card"><div class="eyebrow">рџ“№ KAMERA YOZUVI</div><h3>Soat nimani koвЂrsatdi?</h3><p class="muted">Yozuvda sen eshik oldiga kelgan paytda devor soati qotib qolgan. Vaqt tamgвЂasi barcha urinishlarda bir xil.</p><div class="grid2"><button class="btn" onclick="answerCamera('02:17')">02:17</button><button class="btn" onclick="answerCamera('03:17')">03:17</button><button class="btn" onclick="answerCamera('04:17')">04:17</button><button class="btn" onclick="answerCamera('00:00')">00:00</button></div><div id="cameraFeedback" class="muted" style="margin-top:10px"></div></div><div class="card"><div class="eyebrow">рџ”ђ SHIFRLANGAN XABAR</div><h3>LVKRQPD</h3><p class="muted">Har bir harfni alifboda 3 ta orqaga sur. Qanday ogohlantirish yashiringan?</p><input class="field" id="cipherAnswer" maxlength="24" placeholder="Javobni kiriting" autocomplete="off"><button class="btn primary" onclick="solveCipher()">Shifrni ochish</button><div id="cipherFeedback" class="muted" style="margin-top:10px"></div></div><div class="card"><div class="eyebrow">вЋпёЏ NOMA’LUM QOвЂNGвЂIROQ</div><h3>Telefon yana jiringlayapti…</h3><p class="muted">QoвЂngвЂiroq qiluvchining gaplari ishonch darajangga qarab oвЂzgaradi.</p><button class="btn secondary" onclick="triggerMysteriousCall()">рџ“ћ QoвЂngвЂiroqqa javob berish</button><div id="callFeedback" class="story-text" style="margin-top:12px"></div></div><div class="card"><div class="eyebrow">рџ§  XOTIRA</div><h3>Oldingi qarorlaring</h3><div id="choiceHistory" class="muted">Hali qarorlar saqlanmagan.</div></div><button class="btn ghost" onclick="go('home')">← Asosiy menyu</button></section>
+
+<section id="settings" class="view"><div class="eyebrow">OвЂZINGGA MOSLA</div><h2>вљ™пёЏ Sozlamalar</h2><div class="card"><h3>OвЂyinchi ismi</h3><input class="field" id="nameInput" maxlength="24" placeholder="Ismingni yoz"><button class="btn primary" onclick="saveName()">Ismni saqlash</button></div><div class="card"><div class="row-between"><div><h3>рџ”Љ Ovoz va musiqa</h3><div class="muted">Effektlar va sokin fon tovushi</div></div><button class="btn" style="width:auto;margin:0" id="soundToggle" onclick="toggleSound()">YOQILGAN</button></div><button class="btn ghost" onclick="testSound()">в–¶ Ovozni sinash</button><label class="muted" for="volumeRange">Ovoz balandligi</label><input class="field" id="volumeRange" type="range" min="0" max="100" value="60" oninput="setVolume(this.value)"><div id="volumeLabel" class="muted">60%</div></div><div class="card"><h3>рџ’ѕ OвЂyin ma’lumotlari</h3><p class="muted">Taraqqiyot shu qurilmada saqlanadi. Botga natija yuborish uchun yakun ekranidagi tugmadan foydalan.</p><button class="btn" onclick="exportProgress()">Natijalarni eksport qilish</button><button class="btn danger" onclick="clearProgress()">Mahalliy natijalarni oвЂchirish</button></div><div class="card"><div class="eyebrow">LOOPBREAK</div><h3>Haqiqatni top. Siklni buz.</h3><div class="creator">YARATUVCHI: JASURIY</div></div></section>
+
+<div class="footer">LOOPBREAK В· YARATUVCHI: JASURIY</div></div>
+
+<nav class="nav"><button class="active" data-view="home" onclick="go('home')"><span>вЊ‚</span>Bosh sahifa</button><button data-view="solo" onclick="startGame()"><span>в—€</span>OвЂyin</button><button data-view="missions" onclick="go('missions')"><span>в—Ћ</span>Topshiriq</button><button data-view="ranking" onclick="go('ranking')"><span>в™њ</span>Reyting</button><button data-view="profile" onclick="go('profile')"><span>в—‰</span>Profil</button></nav><div id="toast" class="toast"></div>
+
+<script>
+
+"use strict";
+
+const tg=window.Telegram&&window.Telegram.WebApp?window.Telegram.WebApp:null;
+
+if(tg){tg.ready();tg.expand();try{tg.setHeaderColor("#080c16");tg.setBackgroundColor("#080c16")}catch(e){}}
+
+const SAVE_KEY="loopbreak_save_v3";
+
+const defaultState=()=>({name:tg&&tg.initDataUnsafe&&tg.initDataUnsafe.user?(tg.initDataUnsafe.user.first_name||"OвЂyinchi"):"OвЂyinchi",avatar:"рџ•¶пёЏ",privateId:"",xp:0,games:0,clues:[],history:[],sound:true,volume:0.6,puzzlesSolved:[],choiceHistory:[],missionsClaimed:[],achievements:[],recentScenarioHistory:[],activeGame:null});
+
+let state=loadState(),currentRoom="",toastTimer=null,audioContext=null,musicTimer=null;
+
+function loadState(){try{const raw=localStorage.getItem(SAVE_KEY);return raw?{...defaultState(),...JSON.parse(raw)}:defaultState()}catch(e){return defaultState()}}
+
+function makePrivateId(){return "LB-"+Math.random().toString(36).slice(2,8).toUpperCase()}
+
+if(!state.privateId)state.privateId=makePrivateId();if(!state.avatar)state.avatar="рџ•¶пёЏ";
+
+function saveState(){try{localStorage.setItem(SAVE_KEY,JSON.stringify(state))}catch(e){showToast("Saqlashning iloji boвЂlmadi.")}updateUI()}
+
+function clamp(n,min,max){return Math.max(min,Math.min(max,Number(n)||0))}function level(){return Math.floor(state.xp/100)+1}
+
+function showToast(message){const el=document.getElementById("toast");el.textContent=message;el.classList.add("show");clearTimeout(toastTimer);toastTimer=setTimeout(()=>el.classList.remove("show"),2300)}
+
+function ensureAudio(){const A=window.AudioContext||window.webkitAudioContext;if(!A)return null;if(!audioContext)audioContext=new A();if(audioContext.state==="suspended")audioContext.resume().catch(()=>{});return audioContext}
+
+function tone(freq,duration,type="sine",volume=.045,endFreq=null,delay=0){if(!state.sound)return;try{const ctx=ensureAudio();if(!ctx)return;const osc=ctx.createOscillator(),gain=ctx.createGain(),start=ctx.currentTime+delay;osc.type=type;osc.frequency.setValueAtTime(freq,start);if(endFreq)osc.frequency.exponentialRampToValueAtTime(Math.max(1,endFreq),start+duration);gain.gain.setValueAtTime(.0001,start);gain.gain.exponentialRampToValueAtTime(volume*clamp(state.volume??0.6,0,1),start+.015);gain.gain.exponentialRampToValueAtTime(.0001,start+duration);osc.connect(gain);gain.connect(ctx.destination);osc.start(start);osc.stop(start+duration+.025)}catch(e){}}
+
+function sound(type="click"){if(!state.sound)return;const e={click:()=>tone(520,.055,"sine",.035,650),open:()=>{tone(420,.08,"sine",.035,620);tone(620,.09,"sine",.025,780,.06)},choice:()=>{tone(440,.08,"triangle",.045,660);tone(660,.1,"sine",.025,740,.055)},clue:()=>{tone(700,.12,"sine",.04,980);tone(980,.18,"sine",.035,1200,.1)},danger:()=>{tone(190,.22,"sawtooth",.035,100);tone(145,.25,"triangle",.03,90,.16)},win:()=>{tone(523,.2,"triangle",.045,660);tone(659,.22,"triangle",.045,784,.14);tone(784,.36,"sine",.05,1046,.29)},error:()=>tone(260,.12,"triangle",.035,180)};(e[type]||e.click)()}
+
+function startMusic(){if(!state.sound||musicTimer)return;const seq=[110,146.83,164.81,146.83,98,130.81,146.83,130.81];let step=0;const play=()=>{if(!state.sound||!musicTimer)return;const f=seq[step++%seq.length];tone(f,1.05,"sine",.012,f*1.004);if(step%4===0)tone(f*2,.5,"triangle",.006,f*2.01)};play();musicTimer=setInterval(play,1250)}function stopMusic(){if(musicTimer)clearInterval(musicTimer);musicTimer=null}
+
+function go(id){
+  const target = document.getElementById(id);
+
+  if (!target) {
+    console.warn("BoвЂlim topilmadi:", id);
+    showToast("BoвЂlim topilmadi: " + id);
+    return;
+  }
+
+  document.querySelectorAll(".view").forEach(function(view){
+    view.classList.remove("active");
+  });
+
+  target.classList.add("active");
+
+  document.querySelectorAll(".nav button").forEach(function(button){
+    button.classList.toggle("active", button.dataset.view === id);
+  });
+
+  if(id === "profile") renderProfile();
+  if(id === "ranking") renderRanking();
+  if(id === "missions") renderMissions();
+  if(id === "secrets") renderSecrets();
+
+  if(id === "settings"){
+    const soundToggle = document.getElementById("soundToggle");
+    if(soundToggle){
+      soundToggle.textContent = state.sound ? "YOQILGAN" : "OвЂCHIRILGAN";
+    }
+  if(id === "home"){
+    window.scrollTo({top: 0, behavior: "smooth"});
+  }
+
+  window.scrollTo({top: 0, behavior: "smooth"});
+
+  if(typeof sound === "function"){
+    sound("open");
+  }
+}
+    const volumeRange = document.getElementById("volumeRange");
+    if(volumeRange){
+      volumeRange.value = Math.round((state.volume ?? 0.6) * 100);
+    }
+
+    const volumeLabel = document.getElementById("volumeLabel");
+    if(volumeLabel){
+      volumeLabel.textContent =
+        Math.round((state.volume ?? 0.6) * 100) + "%";
+    }
+  }
+
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+
+  sound("open");
+}
+
+function updateUI(){const xp=state.xp,lvl=level(),p=xp%100;document.getElementById("headerXp").textContent="в­ђ "+xp+" XP";document.getElementById("homeLevel").textContent=lvl;document.getElementById("homeGames").textContent=state.games;document.getElementById("homeEvidence").textContent=state.clues.length;document.getElementById("homeRank").textContent=rankName(lvl);document.getElementById("homeProgress").textContent=p+"% TARAQQIYOT";document.getElementById("homeBar").style.width=p+"%";document.getElementById("homeProgressText").textContent=(100-p)+" XP qoldi — keyingi darajaga yet!";const t=document.getElementById("soundToggle");if(t)t.textContent=state.sound?"YOQILGAN":"OвЂCHIRILGAN"}
+
+function rankName(l){if(l>=15)return"Sikl ustasi";if(l>=10)return"Soya ovchisi";if(l>=5)return"Tergovchi";if(l>=2)return"Izquvar";return"Yangi oвЂyinchi"}
+
+const STORY_LIBRARY = {
+
+  locations: [
+    {
+      art: "рџЊ’",
+      title: "03:17 dagi xona",
+      text: "KoвЂzlaringni ochasan. Devor soati 03:17 da qotib qolgan. Stol ustidagi telefon ekranida bitta jumla turibdi: В«Bu safar menga ishonmaВ»."
+    },
+    {
+      art: "рџљ‡",
+      title: "BoвЂsh metro bekati",
+      text: "Bekat huvillab yotibdi. Elektron tablo bir xil raqamni qayta-qayta koвЂrsatadi. Uzoqdan poyezd tovushi eshitiladi, ammo relslarda hech narsa yoвЂq."
+    },
+    {
+      art: "рџЏљпёЏ",
+      title: "Tashlandiq bino",
+      text: "Devorlarda eski suratlar osilgan. Eng gвЂalatisi — suratlarning birida sen turibsan. Suratning sanasi esa hali kelmagan."
+    },
+    {
+      art: "рџЏҐ",
+      title: "Yopiq klinika",
+      text: "Koridor chiroqlari navbat bilan yonadi. Qabulxonadagi kompyuterda sening isming allaqachon roвЂyxatdan oвЂtgan."
+    },
+    {
+      art: "рџЏЁ",
+      title: "13-qavat",
+      text: "Lift seni 13-qavatga olib chiqadi. Binoda esa atigi 12 qavat bor. Eshik ochilganda ichkaridan telefon jiringlaydi."
+    },
+    {
+      art: "рџЊІ",
+      title: "Tungi oвЂrmon",
+      text: "Telefoning GPS ishlamayapti. Daraxtlar orasida bitta chiroq koвЂrinadi. Chiroq yonidagi odam sening kelishingni kutayotgandek."
+    },
+    {
+      art: "рџЏў",
+      title: "Arxiv",
+      text: "Chang bosgan arxiv javonlarida yuzlab fayllar bor. Ularning barchasida bir xil ism yozilgan: SEN."
+    },
+    {
+      art: "рџ›—",
+      title: "Noma’lum lift",
+      text: "Lift ichidagi tugmalarda raqamlar yoвЂq. Faqat uchta belgi bor: koвЂz, qulf va spiral."
+    }
+  ],
+
+  events: [
+    {
+      title: "Noma’lum xabar",
+      text: "Telefoning birdan yonadi. Yangi xabar kelgan: В«Agar hozir chap tomonga qarasang, u seni koвЂradi.В»",
+      choices: [
+        ["рџ“±", "Xabarni tekshirish", "Yuboruvchini aniqlash.", "clue"],
+        ["рџ‘ЃпёЏ", "Chap tomonga qarash", "Ogohlantirishni sinash.", "danger"],
+        ["рџ”•", "Telefonni oвЂchirish", "Xavfni vaqtincha chetlab oвЂtish.", "safe"]
+      ]
+    },
+
+    {
+      title: "Begona odam",
+      text: "QorongвЂulikdan bir kishi chiqadi. Yuzini aniq koвЂrib boвЂlmaydi. U sening ismingni aytadi.\n\nВ«Biz bundan oldin ham uchrashganmizВ», deydi u.",
+      choices: [
+        ["рџ—ЈпёЏ", "Savol berish", "U haqida koвЂproq bilish.", "trust"],
+        ["рџ”Ћ", "Uni kuzatish", "YolgвЂon gapirayotganini tekshirish.", "clue"],
+        ["рџљ¶", "Undan uzoqlashish", "Masofani saqlash.", "safe"]
+      ]
+    },
+
+    {
+      title: "Kamera",
+      text: "Shift ostidagi kamera qizil chiroq bilan yonadi. Monitorni topsang, oxirgi yozuvni koвЂrishing mumkin.",
+      choices: [
+        ["рџ“№", "Yozuvni koвЂrish", "Kamera nimani yashirayotganini bilish.", "clue"],
+        ["рџ”Њ", "Kamerani uzish", "Kuzatuvni toвЂxtatish.", "danger"],
+        ["рџЋ­", "Kameraga qarab turish", "Kim seni kuzatayotganini sinash.", "trust"]
+      ]
+    },
+
+    {
+      title: "Yopiq eshik",
+      text: "Oldingda elektron qulfli eshik turibdi. Ekranda: В«SEN BU KODNI BILASANВ» degan yozuv paydo boвЂladi.",
+      choices: [
+        ["рџ”ў", "Kodlarni tekshirish", "Atrofdagi raqamlarni solishtirish.", "clue"],
+        ["рџ’Ґ", "Qulfni buzish", "Tez, ammo xavfli yoвЂl.", "danger"],
+        ["рџ§ ", "Xotirani eslash", "Kod qayerdan tanishligini aniqlash.", "memory"]
+      ]
+    },
+
+    {
+      title: "Soxta ovoz",
+      text: "QulogвЂingda oвЂz ovozing eshitiladi:\n\nВ«Bu joydan chiqma. Chiqsang, yana boshidan boshlaysan.В»",
+      choices: [
+        ["рџЋ§", "Ovozni tinglash", "Yashirin xabarni topish.", "clue"],
+        ["рџ—ЈпёЏ", "OвЂz ovozingga javob berish", "Kim boshqarayotganini aniqlash.", "danger"],
+        ["рџљЄ", "Darhol chiqish", "Ogohlantirishni e'tiborsiz qoldirish.", "risk"]
+      ]
+    },
+
+    {
+      title: "GвЂalati hujjat",
+      text: "Stol ustidan hujjat topasan. Unda bugungi sana emas, kelajakdagi sana yozilgan.\n\nPastida esa sening imzoing bor.",
+      choices: [
+        ["рџ“„", "Hujjatni olish", "Dalil sifatida saqlash.", "clue"],
+        ["вњЌпёЏ", "Imzoni tekshirish", "Bu haqiqatan sening imzongmi?", "memory"],
+        ["рџ”Ґ", "Hujjatni yoqish", "Dalilni yoвЂq qilish.", "danger"]
+      ]
+    },
+
+    {
+      title: "Sirli qoвЂngвЂiroq",
+      text: "Telefon jiringlaydi. Raqam koвЂrsatilmaydi.\n\nQoвЂngвЂiroqni qabul qilganingda jimlikdan keyin bitta jumla eshitiladi: В«Uchinchisiga ishonma.В»",
+      choices: [
+        ["вЋпёЏ", "Gaplashishda davom etish", "QoвЂngвЂiroq qiluvchini aniqlash.", "trust"],
+        ["рџ”Ќ", "Raqamni tekshirish", "Texnik iz qidirish.", "clue"],
+        ["рџ“µ", "QoвЂngвЂiroqni uzish", "Noma’lum xavfdan qochish.", "safe"]
+      ]
+    },
+
+    {
+      title: "Uchta eshik",
+      text: "Oldingda uchta eshik turibdi. Birinchisida В«OвЂTMISHВ», ikkinchisida В«HOZIRВ», uchinchisida В«KELAJAKВ» deb yozilgan.",
+      choices: [
+        ["вЏі", "OвЂTMISH", "Avval nima boвЂlganini bilish.", "memory"],
+        ["рџџў", "HOZIR", "Hozirgi vaziyatni tanlash.", "safe"],
+        ["рџ”®", "KELAJAK", "Hali sodir boвЂlmagan voqeani koвЂrish.", "danger"]
+      ]
+    },
+
+    {
+      title: "Xotira parchasi",
+      text: "Bir lahzaga xona oвЂzgarib ketadi. Bu joyni taniysan. Ammo xotirangdagi odamlarning yuzlari yoвЂq.",
+      choices: [
+        ["рџ§ ", "Xotirani ushlash", "Manzarani yodda saqlash.", "memory"],
+        ["рџ“ё", "Suratga olish", "Xotirani dalilga aylantirish.", "clue"],
+        ["рџ¶", "Hech narsa qilmaslik", "Manzaraning oвЂzgarishini kutish.", "safe"]
+      ]
+    },
+
+    {
+      title: "Qulf ortidagi shovqin",
+      text: "Eshik ortidan kimdir yordam soвЂraydi.\n\nAmmo ovoz sening ovozing bilan bir xil.",
+      choices: [
+        ["рџљЄ", "Eshikni ochish", "Ovoz egasini koвЂrish.", "danger"],
+        ["рџ‘‚", "Ovozni tinglash", "U nima bilishini aniqlash.", "clue"],
+        ["рџ”ђ", "Eshikni qulflash", "Xavfni ichkarida qoldirish.", "safe"]
+      ]
+    },
+
+    {
+      title: "YoвЂqolgan vaqt",
+      text: "Soating birdan 47 daqiqaga oldinga ketadi. Shu paytda atrofdagi barcha chiroqlar oвЂchadi.",
+      choices: [
+        ["вЊљ", "Vaqtni tekshirish", "Vaqt bilan bogвЂliq sirni izlash.", "clue"],
+        ["рџЊ‘", "QorongвЂida yurish", "Noma’lum yoвЂlni tanlash.", "danger"],
+        ["рџ§­", "Joyingda qolish", "Vaziyatni kuzatish.", "safe"]
+      ]
+    },
+
+    {
+      title: "Ikkinchi sen",
+      text: "Oynaga qaraysan. Aksing bir necha soniya kechikib harakat qiladi.\n\nKeyin u sendan oldin gapiradi: В«Bu safar xato qilma.В»",
+      choices: [
+        ["рџЄћ", "Aksing bilan gaplashish", "U nimani bilishini soвЂrash.", "memory"],
+        ["рџ‘Љ", "Oynani sindirish", "GвЂalati hodisani toвЂxtatish.", "danger"],
+        ["рџ”Ћ", "Oynani tekshirish", "Orqasida nimadir borligini aniqlash.", "clue"]
+      ]
+    },
+
+    {
+      title: "Yashirin xabar",
+      text: "Devorda oddiy chiziqlar bor. Telefon chirogвЂini yoqsang, ular harflarga oвЂxshab ketadi.",
+      choices: [
+        ["рџ”¦", "Chiroq bilan tekshirish", "Yashirin yozuvni ochish.", "clue"],
+        ["рџ§©", "Belgilarni yechish", "Mantiqiy ketma-ketlikni topish.", "memory"],
+        ["рџљ¶", "E'tibor bermaslik", "Vaqtni yoвЂqotmaslik.", "risk"]
+      ]
+    }
+  ],
+
+  endings: [
+    {
+      title: "Siklning yangi qatlami",
+      text: "Eshik ochiladi. Ammo tashqarida yana bir xona bor.\n\nDevorida bitta yozuv turibdi:\nВ«BU BOSHLANISH EDI.В»"
+    },
+    {
+      title: "Kuzatuvchi",
+      text: "Sen nihoyat kim seni kuzatayotganini tushunasan.\n\nAmmo monitorning boshqa burchagida yana bir kamera yoqiladi."
+    },
+    {
+      title: "Xotira qaytdi",
+      text: "Unutilgan xotiralaringning bir qismi qaytadi. Sen aslida bu voqeani birinchi marta boshdan kechirmayotganingni anglaysan."
+    },
+    {
+      title: "Noma’lum eshik",
+      text: "Oldingda yangi eshik paydo boвЂladi. Unda hech qanday qulf yoвЂq.\n\nFaqat sening maxfiy ID'ing yozilgan."
+    }
+  ]
+};
+
+let activeScenes = [];
+
+function hashText(value){
+  let h = 2166136261;
+  const s = String(value);
+  for(let i=0;i<s.length;i++){
+    h ^= s.charCodeAt(i);
+    h += (h<<1)+(h<<4)+(h<<7)+(h<<8)+(h<<24);
+  }
+  return Math.abs(h >>> 0);
+}
+
+function shuffleArray(arr,seed){
+  const a=[...arr];
+  let x=seed||Date.now();
+
+  for(let i=a.length-1;i>0;i--){
+    x=(x*1664525+1013904223)>>>0;
+    const j=x%(i+1);
+    [a[i],a[j]]=[a[j],a[i]];
+  }
+
+  return a;
+}
+
+function getUsedStoryIds(){
+  const used=[];
+
+  if(Array.isArray(state.recentScenarioHistory)){
+    state.recentScenarioHistory.forEach(run=>{
+      if(Array.isArray(run)){
+        run.forEach(x=>{
+          if(x) used.push(x);
+        });
+      }
+    });
+  }
+
+  if(Array.isArray(state.history)){
+    state.history.forEach(x=>{
+      if(x&&x.storyIds) used.push(...x.storyIds);
+    });
+  }
+
+  return used;
+}
+
+function buildRunScenes(){
+
+  const used=getUsedStoryIds();
+
+  const runSeed=Date.now()+
+    (state.games||0)*7919+
+    (state.xp||0)*31+
+    Math.floor(Math.random()*1000000);
+
+  const locationPool=shuffleArray(
+    STORY_LIBRARY.locations,
+    runSeed
+  );
+
+  const eventPool=shuffleArray(
+    STORY_LIBRARY.events,
+    runSeed+917
+  );
+
+  const result=[];
+
+  /*
+   * Har bir missiya 12 ta sahnadan iborat.
+   * Ammo keyingi missiyada boshqa kombinatsiya tanlanadi.
+   */
+
+  for(let i=0;i<15;i++){
+
+    const location=locationPool[i%locationPool.length];
+
+    const available=eventPool.filter((event,index)=>{
+      const id="event_"+index;
+
+      return !used.includes(id);
+    });
+
+    const source=available.length
+      ? available[i%available.length]
+      : eventPool[(i+runSeed)%eventPool.length];
+
+    const eventIndex=STORY_LIBRARY.events.indexOf(source);
+    const eventId="event_"+eventIndex;
+
+    const difficulty=Math.min(
+      3,
+      Math.floor((state.games||0)/3)
+    );
+
+    const choices=source.choices.map((c,index)=>{
+
+      let energy=0;
+      let trust=0;
+      let danger=0;
+      let score=10;
+
+      if(c[3]==="clue"){
+        energy=-3;
+        trust=4;
+        score=22;
+      }
+
+      if(c[3]==="trust"){
+        energy=-4;
+        trust=12;
+        score=18;
+      }
+
+      if(c[3]==="danger"){
+        energy=-10-(difficulty*2);
+        danger=15+(difficulty*5);
+        trust=-8;
+        score=12;
+      }
+
+      if(c[3]==="memory"){
+        energy=-5;
+        trust=7;
+        score=25;
+      }
+
+      if(c[3]==="safe"){
+        energy=-2;
+        danger=-6;
+        score=14;
+      }
+
+      if(c[3]==="risk"){
+        energy=-7;
+        danger=10;
+        score=20;
+      }
+
+      return {
+        icon:c[0],
+        title:c[1],
+        desc:c[2],
+        energy,
+        trust,
+        danger,
+        score,
+        clue:
+          c[3]==="clue"
+            ? "Yashirin iz #"+(i+1)+" В· "+source.title
+            : null,
+        eventType:c[3],
+        storyId:eventId+"_"+index
+      };
+    });
+
+    result.push({
+      id:"dynamic_"+i+"_"+eventId,
+      art:location.art,
+      label:"QADAM "+String(i+1).padStart(2,"0")+" В· "+location.title.toUpperCase(),
+      title:source.title,
+      text:
+        location.text+
+        "\n\n"+
+        source.text,
+      choices
+    });
+  }
+
+  /*
+   * Oxirgi bosqichda doimiy ending emas.
+   * OвЂyinchi qarorlariga qarab yakun tanlanadi.
+   */
+
+  result.push({
+    id:"dynamic_final",
+    art:"рџЊЂ",
+    label:"QADAM 13 В· ARXIV",
+    title:"Keyingi eshik",
+    text:
+      "Arxiv markaziga yetib kelasan. " +
+      "Orqangdagi eshik yopiladi.\n\n" +
+      "Terminalda bitta savol paydo boвЂladi:\n\n" +
+      "В«Haqiqatni topishni xohlaysanmi yoki haqiqat seni topishiga yoвЂl qoвЂyasanmi?В»",
+    choices:[
+      {
+        icon:"рџ‘ЃпёЏ",
+        title:"Haqiqatni ochish",
+        desc:"Barcha yigвЂilgan dalillarni birlashtirish.",
+        ending:"Siklning yangi qatlami",
+        endingDesc:STORY_LIBRARY.endings[0].text,
+        energy:-8,
+        danger:12,
+        trust:10,
+        score:50
+      },
+      {
+        icon:"рџ“№",
+        title:"Kuzatuvchini izlash",
+        desc:"Seni boshqarayotgan odamni topish.",
+        ending:"Kuzatuvchi",
+        endingDesc:STORY_LIBRARY.endings[1].text,
+        energy:-6,
+        danger:18,
+        trust:5,
+        score:45
+      },
+      {
+        icon:"рџ§ ",
+        title:"Xotirani qaytarish",
+        desc:"OвЂtmishingning yashirilgan qismini ochish.",
+        ending:"Xotira qaytdi",
+        endingDesc:STORY_LIBRARY.endings[2].text,
+        energy:-5,
+        danger:5,
+        trust:15,
+        score:48
+      },
+      {
+        icon:"рџљЄ",
+        title:"Noma’lum eshikdan oвЂtish",
+        desc:"Keyingi qatlamga tavakkal qilish.",
+        ending:"Noma’lum eshik",
+        endingDesc:STORY_LIBRARY.endings[3].text,
+        energy:-12,
+        danger:25,
+        trust:-5,
+        score:55
+      }
+    ]
+  });
+
+  activeScenes=result;
+
+  /*
+   * Keyingi oвЂyinlarda aynan shu kombinatsiya
+   * darhol qayta tanlanmasligi uchun IDlarni saqlaymiz.
+   */
+
+  const pickedIds=result.map(s=>s.id);
+
+  if(!Array.isArray(state.recentScenarioHistory)){
+    state.recentScenarioHistory=[];
+  }
+
+  state.recentScenarioHistory.push(pickedIds);
+
+  state.recentScenarioHistory=
+    state.recentScenarioHistory.slice(-8);
+
+  return activeScenes;
+}
+
+function newGame(){
+  return {
+        upgradeVersion:2,
+    role:null,
+    inventory:[],
+    decisions:[],
+    discoveredSecrets:[],
+    npcTrust:{},
+    trustedCharacters:[],
+    suspiciousCharacters:[],
+    checkpoints:[],
+    stage:0,
+    energy:100,
+    trust:50,
+    danger:10,
+    score:0,
+    clues:[],
+    answers:[],
+    storyIds:activeScenes.map(x=>x.id),
+    startedAt:Date.now()
+  };
+}
+function renderLBRoles(){
+  const box=document.getElementById("lbRoleChoices");
+  const status=document.getElementById("lbRoleStatus");
+  if(!box)return;
+
+  box.replaceChildren();
+
+  LB_UPGRADE.roles.forEach(role=>{
+    const b=document.createElement("button");
+    b.type="button";
+    b.className="btn choice";
+
+    b.innerHTML=
+      "<div class='choice-icon'>"+role.name.charAt(0)+"</div>"+
+      "<div class='choice-text'>"+
+      "<div class='choice-title'>"+role.name+"</div>"+
+      "<div class='choice-desc'>"+role.desc+"</div>"+
+      "</div>";
+
+    b.addEventListener("click",()=>{
+      state.teamRole=role.id;
+      if(state.activeGame){
+        state.activeGame.role=role.id;
+      }
+      saveState();
+      status.textContent="Tanlandi: "+role.name;
+      showToast("Missiya roli: "+role.name);
+    });
+
+    box.appendChild(b);
+  });
+
+  if(state.teamRole){
+    const role=LB_UPGRADE.roles.find(r=>r.id===state.teamRole);
+    if(role)status.textContent="Tanlangan: "+role.name;
+  }
+}
+function startGame(){
+  sound("click");
+
+  buildRunScenes();
+
+  state.activeGame=newGame();
+if(state.teamRole){
+  state.activeGame.role=state.teamRole;
+}
+renderLBRoles();
+  saveState();
+
+  go("solo");
+
+  renderScene();
+
+  startMusic();
+}
+
+
+function renderScene(){const g=state.activeGame;if(!g){startGame();return}const s=activeScenes[g.stage];document.getElementById("stageBadge").textContent=(g.stage+1)+" / "+activeScenes.length+" BOSQICH";document.getElementById("storyBar").style.width=(g.stage/activeScenes.length*100)+"%";document.getElementById("sceneArt").textContent=s.art;document.getElementById("sceneLabel").textContent=s.label;document.getElementById("sceneTitle").textContent=s.title;document.getElementById("sceneText").textContent=s.text;document.getElementById("energyStat").textContent=g.energy;document.getElementById("trustStat").textContent=g.trust;document.getElementById("dangerStat").textContent=g.danger;const cc=document.getElementById("clueCard");cc.style.display=g.clues.length?"block":"none";const cl=document.getElementById("clueList");cl.replaceChildren();g.clues.forEach(c=>{const x=document.createElement("span");x.className="badge";x.textContent="рџ”Ћ "+c;cl.appendChild(x)});const box=document.getElementById("choices");box.replaceChildren();s.choices.forEach((c,i)=>{const b=document.createElement("button");b.className="btn choice";const ic=document.createElement("div");ic.className="choice-icon";ic.textContent=c.icon;const body=document.createElement("div");body.className="choice-text";const t=document.createElement("div");t.className="choice-title";t.textContent=c.title;const d=document.createElement("div");d.className="choice-desc";d.textContent=c.desc;const m=document.createElement("div");m.className="choice-mark";m.textContent="›";body.append(t,d);b.append(ic,body,m);b.addEventListener("click",()=>choose(i));box.appendChild(b)})}
+
+function choose(i){const g=state.activeGame;if(!g)return;const s=activeScenes[g.stage],c=s.choices[i];if(!c)return;if(c.danger>=20)sound("danger");else if(c.clue)sound("clue");else sound("choice");startMusic();g.energy=clamp(g.energy+(c.energy||0),0,100);g.trust=clamp(g.trust+(c.trust||0),0,100);g.danger=clamp(g.danger+(c.danger||0),0,100);g.score+=c.score||0;if(c.clue&&!g.clues.includes(c.clue))g.clues.push(c.clue);g.answers.push({stage:g.stage,choice:c.title});state.choiceHistory.unshift({scene:s.title,choice:c.title,trust:g.trust,danger:g.danger,date:new Date().toISOString()});state.choiceHistory=state.choiceHistory.slice(0,40);if(g.stage===activeScenes.length-1&&c.ending){finishGame(c);return}g.stage++;saveState();renderScene();if(c.nextText)document.getElementById("sceneText").textContent+="\n\n— "+c.nextText;window.scrollTo({top:0,behavior:"smooth"})}
+
+function finishGame(c){const g=state.activeGame;if(c.ending==="SIKL BUZILDI"&&g.clues.length>=3&&g.trust>=60&&g.danger<=55){c={...c,ending:"MAXFIY YAKUN: HAQIQAT ORTIDA",endingDesc:"Sen tizimni shunchaki buzmadВ­ing — uning ichidagi yashirin yozuvni topding. Kamera ortidagi operator ham tajribaning bir qismi edi. Sikl tugadi, ammo arxivda yana bir fayl ochildi: 04:18."}}const xp=Math.max(10,Math.min(200,Math.round(g.score/2)+g.clues.length*5+10));state.xp+=xp;state.games++;state.clues=[...state.clues,...g.clues.filter(x=>!state.clues.includes(x))];const rec={ending:c.ending||"NOMA’LUM YAKUN",desc:c.endingDesc||"Sarguzasht yakunlandi.",xp,score:g.score,clues:g.clues.length,date:new Date().toISOString()};state.history.unshift(rec);state.history=state.history.slice(0,30);state.activeGame=null;checkAchievements();saveState();stopMusic();sound("win");document.getElementById("stageBadge").textContent="YAKUN";document.getElementById("storyBar").style.width="100%";document.getElementById("sceneArt").textContent="рџЏЃ";document.getElementById("sceneLabel").textContent="MISSIYA YAKUNLANDI";document.getElementById("sceneTitle").textContent=rec.ending;document.getElementById("sceneText").textContent=rec.desc+"\n\nв­ђ Olingan XP: "+xp+"\nрџ”Ћ Dalillar: "+g.clues.length+"\nрџ“Љ Ball: "+g.score+"\nрџЋ–пёЏ Darajang: "+level();document.getElementById("energyStat").textContent=g.energy;document.getElementById("trustStat").textContent=g.trust;document.getElementById("dangerStat").textContent=g.danger;document.getElementById("clueCard").style.display=g.clues.length?"block":"none";const cl=document.getElementById("clueList");cl.replaceChildren();g.clues.forEach(x=>{const s=document.createElement("span");s.className="badge";s.textContent="рџ”Ћ "+x;cl.appendChild(s)});const box=document.getElementById("choices");box.replaceChildren();const card=document.createElement("div");card.className="card";card.innerHTML="<div class='eyebrow'>SARGUZASHT NATIJASI</div><h3>Yangi bosqich sari</h3><p class='muted'>Natijang qurilmada saqlandi. Botga yuborsang, Telegram profilingdagi XP ham yangilanishi mumkin.</p>";box.appendChild(card);addActionButton(box,"рџ“© Natijani Telegram botiga yuborish","primary",sendResultToBot);addActionButton(box,"в†» Yana bir bor oвЂynash","secondary",startGame);addActionButton(box,"вЊ‚ Asosiy menyu","ghost",()=>go("home"));window.scrollTo({top:0,behavior:"smooth"});showToast("Missiya tugadi! +"+xp+" XP")}
+
+function addActionButton(p,t,style,fn){const b=document.createElement("button");b.className="btn "+style;b.textContent=t;b.addEventListener("click",fn);p.appendChild(b)}
+
+function sendResultToBot(){
+
+ const r=state.history[0];
+
+ if(!r){showToast("Yuborish uchun natija topilmadi.");return}
+
+ if(!tg||typeof tg.sendData!=="function"){showToast("Telegram ichida oвЂyinni ochib, natijani yubor.");return}
+
+ const resultId=(window.crypto&&typeof window.crypto.randomUUID==="function")?window.crypto.randomUUID():(Date.now().toString()+"-"+Math.random().toString(36).slice(2));
+
+ try{tg.sendData(JSON.stringify({type:"game_result",result_id:resultId,ending:r.ending,score:Math.max(0,Math.min(200,Number(r.score)||0))}));showToast("Natija Telegram botiga yuborildi.")}catch(e){showToast("Yuborilmadi. Telegram ichida qayta urinib koвЂr.")}
+
+}
+
+function resetGameConfirm(){if(confirm("Joriy missiyani boshidan boshlaysanmi?"))startGame()}
+
+function checkAchievements(){[{id:"first",ok:state.games>=1},{id:"clues",ok:state.clues.length>=3},{id:"xp",ok:state.xp>=100},{id:"veteran",ok:state.games>=5}].forEach(a=>{if(a.ok&&!state.achievements.includes(a.id))state.achievements.push(a.id)})}
+
+const avatarChoices=["рџ•¶пёЏ","рџ¦Љ","рџђє","рџ‘‘","рџ¦Ѓ","рџђ‰","рџ‘Ѕ","рџ¤–","рџ§›","рџ¦‰","рџђ€вЂЌв¬›","рџ”Ґ"];
+
+function renderProfile(){document.getElementById("profileName").textContent=state.name;document.getElementById("profileNameInput").value=state.name;document.getElementById("nameInput").value=state.name;document.getElementById("profileAvatar").textContent=state.avatar;document.getElementById("privateId").textContent=state.privateId;document.getElementById("profileLevel").textContent=level()+"-daraja В· "+rankName(level());document.getElementById("profileBadge").textContent=level()>=10?"ELITE":level()>=5?"EXPERT":level()>=2?"SCOUT":"NOVICE";document.getElementById("profileXp").textContent=state.xp;document.getElementById("profileGames").textContent=state.games;document.getElementById("profileClues").textContent=state.clues.length;document.getElementById("xpProgressText").textContent=(state.xp%100)+" / 100 XP";document.getElementById("xpBar").style.width=(state.xp%100)+"%";const picker=document.getElementById("avatarPicker");picker.replaceChildren();avatarChoices.forEach(a=>{const b=document.createElement("button");b.type="button";b.className="avatar-option"+(state.avatar===a?" selected":"");b.textContent=a;b.setAttribute("aria-label","Avatar "+a);b.onclick=()=>{state.avatar=a;renderProfile();sound("choice")};picker.appendChild(b)});const hist=document.getElementById("historyList");hist.replaceChildren();if(!state.history.length)hist.innerHTML="<div class='empty'>Hozircha natija yoвЂq. Birinchi missiyangni bajar!</div>";else state.history.slice(0,10).forEach(it=>{const row=document.createElement("div");row.className="row";row.style.margin="12px 0";const ic=document.createElement("div");ic.className="choice-icon";ic.textContent="рџЏЃ";const body=document.createElement("div");body.className="grow";const name=document.createElement("div");name.style.fontWeight="850";name.textContent=it.ending;const meta=document.createElement("div");meta.className="muted";meta.textContent=it.clues+" dalil В· "+it.score+" ball";const xp=document.createElement("div");xp.className="badge";xp.textContent="+"+it.xp+" XP";body.append(name,meta);row.append(ic,body,xp);hist.appendChild(row)});const ach=document.getElementById("profileAchievements");ach.replaceChildren();const all=[{id:"first",icon:"рџЊџ",name:"Birinchi qadam",desc:"Birinchi missiya"},{id:"clues",icon:"рџ”Ћ",name:"Sinchkov tergovchi",desc:"3 dalil"},{id:"xp",icon:"в­ђ",name:"Tajriba orttir",desc:"100 XP"},{id:"veteran",icon:"рџЊЂ",name:"Sikl sayyohi",desc:"5 oвЂyin"}];all.forEach(a=>{const d=document.createElement("div");d.className="achievement-card row";const ic=document.createElement("div");ic.className="choice-icon";ic.textContent=state.achievements.includes(a.id)?a.icon:"рџ”’";const body=document.createElement("div");body.className="grow";const n=document.createElement("div");n.style.fontWeight="850";n.textContent=a.name;const desc=document.createElement("div");desc.className="muted";desc.textContent=a.desc;body.append(n,desc);const badge=document.createElement("span");badge.className="badge";badge.textContent=state.achievements.includes(a.id)?"OLINDI":"YOPIQ";d.append(ic,body,badge);ach.appendChild(d)})}
+
+function sendStreakCheckin(){sound("click");if(!tg||typeof tg.sendData!=="function"){showToast("Telegram bot ichidan oching, soвЂng Streakni qayd eting.");return}try{tg.sendData(JSON.stringify({type:"streak_checkin"}))}catch(e){showToast("Streak soвЂrovini yuborib boвЂlmadi.")}}
+
+function requestPremium(){sound("click");if(!tg||typeof tg.sendData!=="function"){showToast("Premium olish uchun Telegram bot ichidan oching.");return}try{tg.sendData(JSON.stringify({type:"premium_request"}))}catch(e){showToast("Premium soвЂrovini yuborib boвЂlmadi.")}}
+
+function saveProfile(){const name=document.getElementById("profileNameInput").value.trim().slice(0,24);if(!name){showToast("Ismni kiriting.");sound("error");return}state.name=name;saveState();renderProfile();showToast("Maxfiy profil saqlandi.");sound("clue")}
+
+async function copyPrivateId(){try{await navigator.clipboard.writeText(state.privateId);showToast("Maxfiy ID nusxalandi.")}catch(e){showToast("Maxfiy ID: "+state.privateId)}sound("clue")}
+
+function renderRanking(){const list=document.getElementById("localRanking");list.replaceChildren();if(!state.history.length){list.innerHTML="<div class='empty'>Hali natijalar yoвЂq. OвЂyinni tugat va reytingni yangila.</div>";return}[...state.history].sort((a,b)=>b.score-a.score).slice(0,10).forEach((it,i)=>{const row=document.createElement("div");row.className="row";row.style.margin="12px 0";const num=document.createElement("div");num.className="choice-icon";num.textContent=["рџҐ‡","рџҐ€","рџҐ‰"][i]||String(i+1);const body=document.createElement("div");body.className="grow";const name=document.createElement("div");name.style.fontWeight="850";name.textContent=it.ending;const meta=document.createElement("div");meta.className="muted";meta.textContent=it.clues+" dalil";const score=document.createElement("div");score.className="badge";score.textContent=it.score+" ball";body.append(name,meta);row.append(num,body,score);list.appendChild(row)})}
+
+function renderMissions(){const list=document.getElementById("missionList");list.replaceChildren();[{id:"play",icon:"рџЋ®",title:"Sarguzashtni boshlash",desc:"Bitta missiyani tugat",target:1,progress:state.games},{id:"clue",icon:"рџ”Ћ",title:"Izquvar",desc:"3 ta dalil top",target:3,progress:state.clues.length},{id:"xp100",icon:"в­ђ",title:"Tajriba yigвЂish",desc:"100 XP toвЂpla",target:100,progress:state.xp}].forEach(m=>{const done=state.missionsClaimed.includes(m.id),complete=m.progress>=m.target,card=document.createElement("div");card.className="card";const row=document.createElement("div");row.className="row";const icon=document.createElement("div");icon.className="choice-icon";icon.textContent=m.icon;const body=document.createElement("div");body.className="grow";const title=document.createElement("h3");title.textContent=m.title;const desc=document.createElement("div");desc.className="muted";desc.textContent=m.desc;const prog=document.createElement("div");prog.className="progress";const fill=document.createElement("div");fill.style.width=Math.min(100,m.progress/m.target*100)+"%";prog.appendChild(fill);const meta=document.createElement("div");meta.className="muted";meta.textContent=Math.min(m.progress,m.target)+" / "+m.target;body.append(title,desc,prog,meta);row.append(icon,body);card.appendChild(row);const b=document.createElement("button");b.className="btn "+(complete&&!done?"primary":"ghost");b.textContent=done?"вњ“ Mukofot olingan":complete?"рџЋЃ 20 XP olish":"Davom etish";b.disabled=!complete||done;b.onclick=()=>{sound("win");state.missionsClaimed.push(m.id);state.xp+=20;checkAchievements();saveState();renderMissions();showToast("+20 XP mukofot!")};card.appendChild(b);list.appendChild(card)});const ach=document.getElementById("achievementList");ach.replaceChildren();[{id:"first",icon:"рџЊџ",name:"Birinchi qadam",desc:"Birinchi missiya"},{id:"clues",icon:"рџ”Ћ",name:"Sinchkov tergovchi",desc:"3 dalil"},{id:"xp",icon:"в­ђ",name:"Tajriba orttir",desc:"100 XP"},{id:"veteran",icon:"рџЊЂ",name:"Sikl sayyohi",desc:"5 oвЂyin"}].forEach(a=>{const row=document.createElement("div");row.className="card row";const ic=document.createElement("div");ic.className="choice-icon";ic.textContent=state.achievements.includes(a.id)?a.icon:"рџ”’";const body=document.createElement("div");body.className="grow";const n=document.createElement("div");n.style.fontWeight="850";n.textContent=a.name;const d=document.createElement("div");d.className="muted";d.textContent=a.desc;body.append(n,d);const badge=document.createElement("span");badge.className="badge";badge.textContent=state.achievements.includes(a.id)?"OLINDI":"YOPIQ";row.append(ic,body,badge);ach.appendChild(row)})}
+
+function saveName(){const name=document.getElementById("nameInput").value.trim().slice(0,24);if(!name){sound("error");showToast("Ismni kiriting.");return}state.name=name;saveState();renderProfile();showToast("Ism saqlandi.")}
+
+function toggleSound(){state.sound=!state.sound;if(state.sound){saveState();sound("win");startMusic();showToast("Ovoz va fon tovushi yoqildi рџ”Љ")}else{stopMusic();saveState();showToast("Ovoz oвЂchirildi рџ”‡")}}function testSound(){if(!state.sound){state.sound=true;saveState()}sound("win");startMusic();showToast("Ovoz ishlayapti рџ”Љ")}
+
+
+function showRoom(room) {
+  currentRoomData = room;
+  currentRoom = room.code || currentRoom;
+
+  document.getElementById("roomCode").textContent = currentRoom;
+  document.getElementById("roomCreated").style.display = "block";
+
+  const status = document.getElementById("roomStatus");
+  const playersBox = document.getElementById("roomPlayers");
+
+  status.textContent = "Xona holati: " + (room.status || "waiting");
+
+  playersBox.replaceChildren();
+
+  const players = Array.isArray(room.players) ? room.players : [];
+
+  if (!players.length) {
+    playersBox.textContent = "Ishtirokchilar hali koвЂrinmayapti.";
+    return;
+  }
+
+  players.forEach((player, index) => {
+    const card = document.createElement("div");
+    card.className = "card";
+
+    const name = document.createElement("strong");
+    name.textContent = player.name || ("OвЂyinchi " + (index + 1));
+
+    const detail = document.createElement("div");
+    detail.className = "muted";
+    detail.textContent = player.online
+      ? "рџџў Onlayn"
+      : "вљЄ Holati noma’lum";
+
+    card.append(name, detail);
+    playersBox.appendChild(card);
+  });
+}
+
+  const data = await response.json();
+
+  if (!response.ok) {
+    throw new Error(data.detail || "Server xatosi: " + response.status);
+  }
+
+  return data;
+}
+const API_BASE = "https://loopbreak-server.onrender.com";
+async function apiRequest(path, options = {}) {
+  const response = await fetch(API_BASE + path, {
+    ...options,
+    headers: {
+      "Content-Type": "application/json",
+      ...(options.headers || {})
+    }
+  });
+
+  const data = await response.json();
+
+  if (!response.ok) {
+    throw new Error(data.detail || "Server xatosi: " + response.status);
+  }
+
+  return data;
+}
+function getPlayerId() {
+  let id = localStorage.getItem("loopbreak_player_id");
+  if (!id) {
+    id = "player_" + Date.now() + Math.random().toString(36).slice(2);
+    localStorage.setItem("loopbreak_player_id", id);
+  }
+  return id;
+}
+
+async function apiRequest(path, options = {}) {
+  const response = await fetch(API_BASE + path, {
+    ...options,
+    headers: {
+      "Content-Type": "application/json",
+      ...(options.headers || {})
+    }
+  });
+
+  const data = await response.json();
+  if (!response.ok) {
+    throw new Error(data.detail || "Server xatosi: " + response.status);
+  }
+  return data;
+}
+async function createRoom() {
+  try {
+    const data = await apiRequest("/api/rooms", {
+      method: "POST",
+      body: JSON.stringify({
+        player_id: getPlayerId(),
+        name: state.name || "Kuzatuvchi"
+      })
+    });
+
+    const room = data.room || data;
+    currentRoom = room.code;
+
+    if (!currentRoom) {
+      throw new Error("Server xona kodini qaytarmadi.");
+    }
+
+    showRoom(room);
+    startRoomPolling();
+    sound("clue");
+    showToast("Serverda xona yaratildi: " + currentRoom);
+  } catch (error) {
+    showToast("Xona yaratilmadi: " + error.message);
+  }
+}
+
+async function joinRoom() {
+  const input = document.getElementById("joinCode");
+  const result = document.getElementById("joinResult");
+  const code = input.value.trim().toUpperCase();
+
+  if (!code) {
+    result.textContent = "Xona kodini kiriting.";
+    return;
+  }
+
+  try {
+    const data = await apiRequest(
+      "/api/rooms/" + encodeURIComponent(code) + "/join",
+      {
+        method: "POST",
+        body: JSON.stringify({
+          player_id: getPlayerId(),
+          name: state.name || "Kuzatuvchi"
+        })
+      }
+    );
+
+    const room = data.room || data;
+    currentRoom = room.code || code;
+
+    showRoom(room);
+    result.textContent = "Serverdagi xonaga qoвЂshildingiz!";
+    startRoomPolling();
+    sound("clue");
+    showToast("Xonaga muvaffaqiyatli qoвЂshildingiz!");
+  } catch (error) {
+    result.textContent = "Ulanib boвЂlmadi: " + error.message;
+    sound("error");
+  }
+}
+
+function startRoomPolling() {
+  if (roomPollTimer) clearInterval(roomPollTimer);
+
+  roomPollTimer = setInterval(async () => {
+    if (!currentRoom) return;
+
+    try {
+      const data = await apiRequest(
+        "/api/rooms/" + encodeURIComponent(currentRoom)
+      );
+
+      const room = data.room || data;
+
+      if (room.code && room.code !== currentRoom) return;
+
+      showRoom(room);
+    } catch (error) {
+      console.warn("Xona yangilanmadi:", error.message);
+    }
+  }, 3000);
+}
+
+async function leaveRoom() {
+  if (!currentRoom) {
+    showToast("Siz hozir xonada emassiz.");
+    return;
+  }
+
+  const code = currentRoom;
+
+  try {
+    await apiRequest(
+      "/api/rooms/" + encodeURIComponent(code) + "/leave",
+      {
+        method: "POST",
+        body: JSON.stringify({
+          player_id: getPlayerId()
+        })
+      }
+    );
+  } catch (error) {
+    console.warn("Xonadan chiqishda xato:", error.message);
+  }
+
+  if (roomPollTimer) clearInterval(roomPollTimer);
+
+  roomPollTimer = null;
+  currentRoom = "";
+  currentRoomData = null;
+
+  document.getElementById("roomCreated").style.display = "none";
+  document.getElementById("joinResult").textContent = "";
+
+  showToast("Xonadan chiqdingiz.");
+}
+
+async function copyRoom() {
+  if (!currentRoom) return;
+
+  try {
+    await navigator.clipboard.writeText(currentRoom);
+    showToast("Xona kodi nusxalandi.");
+  } catch (error) {
+    showToast("Xona kodi: " + currentRoom);
+  }
+}
+
+function shareRoom() {
+  if (!currentRoom) return;
+
+  const text = "LOOPBREAK guruh xonam: " + currentRoom;
+
+  if (tg && tg.openTelegramLink) {
+    tg.openTelegramLink(
+      "https://t.me/share/url?url=" + encodeURIComponent(text)
+    );
+  } else if (navigator.share) {
+    navigator.share({ text }).catch(() => copyRoom());
+  } else {
+    copyRoom();
+  }
+}
+
+
+function exportProgress(){const blob=new Blob([JSON.stringify(state,null,2)],{type:"application/json"}),url=URL.createObjectURL(blob),a=document.createElement("a");a.href=url;a.download="loopbreak-progress.json";a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);sound("clue");showToast("Natijalar fayli tayyor.")}
+
+function clearProgress(){if(!confirm("Barcha mahalliy XP, natija va yutuqlarni oвЂchirasanmi? Bu amalni qaytarib boвЂlmaydi."))return;stopMusic();state=defaultState();state.privateId=makePrivateId();try{localStorage.removeItem(SAVE_KEY)}catch(e){}saveState();renderProfile();renderMissions();renderRanking();sound("open");showToast("Mahalliy natijalar oвЂchirildi.")}
+
+
+function renderSecrets() {
+  const board = document.getElementById("evidenceBoard");
+  board.replaceChildren();
+
+  if (!state.evidenceStatus) {
+    state.evidenceStatus = {};
+  }
+
+  if (!state.clues.length) {
+    board.textContent = "Hali dalil topilmadi. Missiyani o'ynab, izlarni yig'.";
+  } else {
+    state.clues.forEach((clue, i) => {
+      const row = document.createElement("div");
+      row.className = "card";
+      row.style.margin = "9px 0";
+
+      const title = document.createElement("strong");
+      title.textContent = (i + 1) + ". " + clue;
+
+      const select = document.createElement("select");
+      select.style.display = "block";
+      select.style.marginTop = "10px";
+      select.style.width = "100%";
+      select.style.padding = "10px";
+      select.style.borderRadius = "10px";
+
+      const statuses = [
+        ["unverified", "🔎 Tekshirilmagan"],
+        ["confirmed", "✅ Tasdiqlangan"],
+        ["suspicious", "⚠️ Shubhali"],
+        ["false", "❌ Soxta dalil"]
+      ];
+
+      statuses.forEach(([value, label]) => {
+        const option = document.createElement("option");
+        option.value = value;
+        option.textContent = label;
+        select.appendChild(option);
+      });
+
+      select.value = state.evidenceStatus[i] || "unverified";
+
+      select.addEventListener("change", () => {
+        state.evidenceStatus[i] = select.value;
+        localStorage.setItem("loopbreak_save_v3", JSON.stringify(state));
+      });
+
+      row.append(title, select);
+      board.appendChild(row);
+    });
+  }
+
+  const hist = document.getElementById("choiceHistory");
+  hist.replaceChildren();
+
+  if (!state.choiceHistory.length) {
+    hist.textContent = "Hali qarorlar saqlanmagan.";
+  } else {
+    state.choiceHistory.slice(0, 12).forEach(item => {
+      const row = document.createElement("div");
+      row.className = "card";
+      row.style.margin = "8px 0";
+
+      const title = document.createElement("strong");
+      title.textContent = item.choice;
+
+      const meta = document.createElement("div");
+      meta.className = "muted";
+      meta.textContent =
+        item.scene + " · Ishonch " + item.trust + " · Xavf " + item.danger;
+
+      row.append(title, meta);
+      hist.appendChild(row);
+    });
+  }
+
+  document.getElementById("cameraFeedback").textContent =
+    state.puzzlesSolved.includes("camera")
+      ? "✓ Kamera jumboqi yechilgan."
+      : "";
+
+  document.getElementById("cipherFeedback").textContent =
+    state.puzzlesSolved.includes("cipher")
+      ? "✓ Shifr yechilgan: ISHONMA."
+      : "";
+}
+
+function grantPuzzleReward(id,clue){if(state.puzzlesSolved.includes(id))return false;state.puzzlesSolved.push(id);state.xp+=15;if(!state.clues.includes(clue))state.clues.push(clue);if(state.activeGame){if(!state.activeGame.clues.includes(clue))state.activeGame.clues.push(clue);state.activeGame.score+=15}checkAchievements();saveState();renderSecrets();sound("win");return true}
+function answerCamera(answer){if(state.puzzlesSolved.includes("camera")){showToast("Bu jumboq allaqachon yechilgan.");return}if(answer==="03:17"){grantPuzzleReward("camera","Kamera tamgвЂasi: 03:17");document.getElementById("cameraFeedback").textContent="ToвЂgвЂri. Har bir yozuv aynan 03:17 da qayta boshlanadi. +15 XP";showToast("Kamera jumboДџi yechildi: +15 XP")}else{document.getElementById("cameraFeedback").textContent="NotoвЂgвЂri. Yozuvdagi devor soatini yana tekshir.";sound("error")}}
+function solveCipher(){if(state.puzzlesSolved.includes("cipher")){showToast("Shifr allaqachon ochilgan.");return}const answer=document.getElementById("cipherAnswer").value.trim().toUpperCase().replace(/\s+/g,"");if(answer==="ISHONMA"){grantPuzzleReward("cipher","Shifr: ISHONMA ogohlantirishi");document.getElementById("cipherFeedback").textContent="ToвЂgвЂri: ISHONMA. Xabar oвЂzingni ogohlantiryapti. +15 XP";showToast("Shifr ochildi: +15 XP")}else{document.getElementById("cipherFeedback").textContent="Hali toвЂgвЂri emas. Har bir harfni 3 ta orqaga sur.";sound("error")}}
+function triggerMysteriousCall(){sound("danger");const trust=state.activeGame?state.activeGame.trust:50;const lines=trust>=70?["В«Men senga ishonaman. 04:18 dagi yozuvni top. Ular vaqtni soxtalashtiryapti.В»","В«Sening oldingi qaroring arxivda saqlangan. Dalillarni bir-biriga solishtir.В»"]:trust<=30?["В«Senga hech kim yordam bermaydi. Eshikni ochsang, yana boshidan boshlaysan.В»","В«Kamera ortida turgan odam seni kuzatyapti. Ishonchni notoвЂgвЂri joyga berding.В»"]:["В«Bu safar soatga ishon. 03:17 — boshlanish emas, takrorlanish nuqtasi.В»","В«Agar shifrni yechsang, oвЂzing haqingdagi fayl ochiladi. Lekin har bir javob narx talab qiladi.В»"];const msg=lines[Math.floor(Math.random()*lines.length)];document.getElementById("callFeedback").textContent="вЋпёЏ NOMA’LUM: "+msg;state.choiceHistory.unshift({scene:"Noma’lum qoвЂngвЂiroq",choice:msg,trust:trust,danger:state.activeGame?state.activeGame.danger:0,date:new Date().toISOString()});state.choiceHistory=state.choiceHistory.slice(0,40);saveState();renderSecrets()}
+function setVolume(value){state.volume=clamp(Number(value)/100,0,1);const label=document.getElementById("volumeLabel");if(label)label.textContent=Math.round(state.volume*100)+"%";saveState()}
+
+updateUI();renderProfile();renderRanking();renderMissions();
+
+</script>
+
+</body><script>
+window.LB_UPGRADE = {
+  version: 2,
+  roles: [
+    {id:"investigator",name:"TERGOVCHI",bonus:"clue"},
+    {id:"analyst",name:"ANALITIK",bonus:"puzzle"},
+    {id:"guardian",name:"QO‘RIQCHI",bonus:"danger"},
+    {id:"negotiator",name:"MUZOKARACHI",bonus:"trust"}
+  ],
+  npcs: [
+    {id:"operator",name:"Kuzatuvchi",trust:35},
+    {id:"mira",name:"Mira",trust:55},
+    {id:"warden",name:"Qo‘riqchi",trust:45}
+  ],
+  randomEvents: [
+    {title:"KAMERA O‘CHDI",type:"danger"},
+    {title:"YASHIRIN SIGNAL",type:"clue"},
+    {title:"ESKI XABAR",type:"memory"},
+    {title:"NOMA’LUM QO‘NG‘IROQ",type:"trust"}
+  ]
+};
+</script>
+
+</html>
+
